@@ -1,0 +1,9 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: install intellij idea 16 ultimate
+      mac_pkg: pkg_type=app
+               url=https://download.jetbrains.com/idea/ideaIU-2016.1.1.dmg
+               archive_type=dmg archive_path='IntelliJ IDEA.app'
+      sudo: yes

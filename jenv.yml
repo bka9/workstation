@@ -1,0 +1,6 @@
+---
+- hosts: workstation
+  
+  tasks:
+    - name: Install jenv
+      command: git clone https://github.com/gcuisinier/jenv.git ~/.jenv

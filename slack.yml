@@ -1,0 +1,8 @@
+---
+- hosts: workstation
+  tasks:
+    - name: Install Slack Client
+      mac_pkg: pkg_type=app
+               url=https://downloads.slack-edge.com/mac_public_releases/slack-2.0.2.zip
+               archive_type=zip archive_path=Slack.app
+      sudo: yes

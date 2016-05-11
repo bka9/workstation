@@ -1,0 +1,12 @@
+---
+- hosts: workstation
+
+  tasks:
+    - name: checkout install script
+      command: git clone https://github.com/octanner/appreciatekit/ $HOME/.appreciatekit
+    
+    - name: export into PATH
+      command: export PATH=$PATH:$HOME/.appreciatekit/bin
+
+    - name: run appreciatekit installer
+      command: appreciatekit install
