@@ -1,0 +1,8 @@
+---
+- hosts: workstation
+  tasks:
+    - name: Install CCMenu
+      mac_pkg: pkg_type=app
+               url=https://github.com/erikdoe/ccmenu/releases/download/v1.10.3/CCMenu.app.zip
+               archive_type=zip archive_path=CCMenu.app
+      sudo: yes
